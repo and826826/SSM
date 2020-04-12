@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssm.mapper.UserMapper">
+  <insert id="addUser">
+  	insert into employee_inf(DEPT_ID,JOB_ID) values('222222','959595');
+  </insert>
+
+<!--  <delete id="deleteUser" parameterType="int">-->
+<!--  	delete from  user where  id=#{id};-->
+<!--  </delete>-->
+
+<!--  <update id="updateUser">-->
+<!--  	update user set password='888888' where id=7;-->
+<!--  </update>-->
+  
+<!--  <select id="findOne" resultType="com.ssm.pojo.User">-->
+<!--  	select * from  user where  id=1;-->
+<!--  </select>-->
+<!--  -->
+<!--  <select id="login" resultType="com.ssm.pojo.User"-->
+<!--  	parameterType="com.ssm.pojo.User"-->
+<!--  >-->
+<!--  		select * from  user where  username=#{username} and password=#{password}-->
+<!--  </select>-->
+  
+
+</mapper>
