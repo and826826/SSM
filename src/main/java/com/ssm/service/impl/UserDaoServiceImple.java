@@ -13,10 +13,10 @@ public class UserDaoServiceImple implements UserDaoService{
 	@Autowired
 	UserMapper mapper;
 	
-	@Override
-	public employee findOne() {
-		employee  user = mapper.findOne();
-		return user;
-	}
+//	@Override
+//	public findOne() {
+//
+//
+//	}
 
 }

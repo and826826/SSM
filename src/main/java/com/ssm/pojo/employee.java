@@ -6,48 +6,73 @@ public class employee {
     int id;
     //部门主键
     int dept_id;
+    //职位主键
+    int job_id;
     //姓名
-    char name;
+    String name;
     //身份证号
-    int card_id;
+    String card_id;
     //地址
-    char address;
+    String address;
     //邮编
-    char post_code;
+    String post_code;
+
+    public int getJob_id() {
+        return job_id;
+    }
+
+    public void setJob_id(int job_id) {
+        this.job_id = job_id;
+    }
+
+    public employee(int dept_id, String name, String card_id, String address, String post_code, String tel, String phone, String qq, String email, String sex, String party, Timestamp birthday, String race, String education, String speciality, String hobby, String remark, int job_id) {
+        this.dept_id = dept_id;
+        this.job_id=job_id;
+        this.name = name;
+        this.card_id = card_id;
+        this.address = address;
+        this.post_code = post_code;
+        this.tel = tel;
+        this.phone = phone;
+        this.qq = qq;
+        this.email = email;
+        this.sex = sex;
+        this.party = party;
+        this.birthday = birthday;
+        this.race = race;
+        this.education = education;
+        this.speciality = speciality;
+        this.hobby = hobby;
+        this.remark = remark;
+    }
+
     //电话
-    int tel;
+    String tel;
     //手机
-    int phone;
+    String phone;
     //qq
-    int qq;
+    String qq;
     //邮箱
-    char email;
+    String email;
     //性别
-    char sex;
+    String sex;
     //政党
-    char party;
+    String party;
     //生日
     Timestamp birthday;
     //民族
-    char race;
+    String race;
     //学历
-    char education;
+    String education;
     //专业
-    char speciality;
+    String speciality;
     //爱好
-    char hobby;
+    String hobby;
     //备注
-    char remark;
-    //创建日期
-    Timestamp createdate;
+    String remark;
+//    //创建日期
+//    Timestamp createdate;
 
-    public Timestamp getCreatedate() {
-        return createdate;
-    }
-
-    public void setCreatedate(Timestamp createdate) {
-        this.createdate = createdate;
-    }
 
     public int getId() {
         return id;
@@ -65,83 +90,83 @@ public class employee {
         this.dept_id = dept_id;
     }
 
-    public char getName() {
+    public String getName() {
         return name;
     }
 
-    public void setName(char name) {
+    public void setName(String name) {
         this.name = name;
     }
 
-    public int getCard_id() {
+    public String getCard_id() {
         return card_id;
     }
 
-    public void setCard_id(int card_id) {
+    public void setCard_id(String card_id) {
         this.card_id = card_id;
     }
 
-    public char getAddress() {
+    public String getAddress() {
         return address;
     }
 
-    public void setAddress(char address) {
+    public void setAddress(String address) {
         this.address = address;
     }
 
-    public char getPost_code() {
+    public String getPost_code() {
         return post_code;
     }
 
-    public void setPost_code(char post_code) {
+    public void setPost_code(String post_code) {
         this.post_code = post_code;
     }
 
-    public int getTel() {
+    public String getTel() {
         return tel;
     }
 
-    public void setTel(int tel) {
+    public void setTel(String tel) {
         this.tel = tel;
     }
 
-    public int getPhone() {
+    public String getPhone() {
         return phone;
     }
 
-    public void setPhone(int phone) {
+    public void setPhone(String phone) {
         this.phone = phone;
     }
 
-    public int getQq() {
+    public String getQq() {
         return qq;
     }
 
-    public void setQq(int qq) {
+    public void setQq(String qq) {
         this.qq = qq;
     }
 
-    public char getEmail() {
+    public String getEmail() {
         return email;
     }
 
-    public void setEmail(char email) {
+    public void setEmail(String email) {
         this.email = email;
     }
 
-    public char getSex() {
+    public String getSex() {
         return sex;
     }
 
-    public void setSex(char sex) {
+    public void setSex(String sex) {
         this.sex = sex;
     }
 
-    public char getParty() {
+    public String getParty() {
         return party;
     }
 
-    public void setParty(char party) {
+    public void setParty(String party) {
         this.party = party;
     }
 
@@ -153,43 +178,43 @@ public class employee {
         this.birthday = birthday;
     }
 
-    public char getRace() {
+    public String getRace() {
         return race;
     }
 
-    public void setRace(char race) {
+    public void setRace(String race) {
         this.race = race;
     }
 
-    public char getEducation() {
+    public String getEducation() {
         return education;
     }
 
-    public void setEducation(char education) {
+    public void setEducation(String education) {
         this.education = education;
     }
 
-    public char getSpeciality() {
+    public String getSpeciality() {
         return speciality;
     }
 
-    public void setSpeciality(char speciality) {
+    public void setSpeciality(String speciality) {
         this.speciality = speciality;
     }
 
-    public char getHobby() {
+    public String getHobby() {
         return hobby;
     }
 
-    public void setHobby(char hobby) {
+    public void setHobby(String hobby) {
         this.hobby = hobby;
     }
 
-    public char getRemark() {
+    public String getRemark() {
         return remark;
     }
 
-    public void setRemark(char remark) {
+    public void setRemark(String remark) {
         this.remark = remark;
     }
 

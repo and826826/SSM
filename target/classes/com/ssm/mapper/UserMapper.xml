@@ -4,7 +4,10 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.ssm.mapper.UserMapper">
   <insert id="addUser">
-  	insert into employee_inf(DEPT_ID,JOB_ID) values('222222','959595');
+  	insert into employee_inf(DEPT_ID,JOB_ID,name ,card_id,address,post_code,tel,phone,qq,email,party,birthday,
+  	race,education,speciality,hobby,remark,sex) values(#{dept_id},#{job_id},#{name },#{card_id},
+  	#{address},#{post_code},#{tel},#{phone},#{qq},#{email},#{party},#{birthday},#{race},#{education},#{speciality},
+  	#{hobby},#{remark},#{sex});
   </insert>
 
 <!--  <delete id="deleteUser" parameterType="int">-->
