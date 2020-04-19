@@ -26,13 +26,18 @@
 <!--静态资源放行  -->
 <mvc:default-servlet-handler/>
 
-<!--视图解析器  -->
-<!--<bean  class="org.springframework.web.servlet.view.InternalResourceViewResolver">-->
-<!--	<property name="prefix" value="/WEB-INF/jsps/"/>-->
-<!--	<property name="suffix" value=".jsp"/>-->
-<!--</bean>-->
+
+
+<!--视图解析器-->
+<bean  class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+	<property name="prefix" value="/WEB-INF/csi员工之家原型/hrm/employee/"/>
+	<property name="suffix" value=".html"/>
+</bean>
+<!--	<bean  class="org.springframework.web.servlet.view.InternalResourceViewResolver">-->
+<!--		<property name="prefix" value="/WEB-INF/jsps/"/>-->
+<!--		<property name="suffix" value=""/>-->
+<!--	</bean>-->
 <!--    将springMVC不能处理的请求交给tomcat-->
-<!--    <mvc:default-servlet-handler/>-->
 
 
 </beans>

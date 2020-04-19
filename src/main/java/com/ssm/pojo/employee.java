@@ -1,5 +1,7 @@
 package com.ssm.pojo;
-import java.sql.*;
+
+
+import java.sql.Timestamp;
 
 public class employee {
     //id是主键
@@ -17,12 +19,47 @@ public class employee {
     //邮编
     String post_code;
 
+
     public int getJob_id() {
         return job_id;
     }
 
     public void setJob_id(int job_id) {
         this.job_id = job_id;
+    }
+
+    public employee() {
+    }
+
+    public employee(int id, int dept_id, int job_id, String name, String card_id, String address, String post_code, String tel, String phone, String qq, String email, String party, Timestamp birthday, String race, String education, String speciality, String hobby, String remark, String sex) {
+        this.id = id;
+        this.dept_id = dept_id;
+        this.job_id = job_id;
+        this.name = name;
+        this.card_id = card_id;
+        this.address = address;
+        this.post_code = post_code;
+        this.tel = tel;
+        this.phone = phone;
+        this.qq = qq;
+        this.email = email;
+        this.party = party;
+        this.birthday = birthday;
+        this.race = race;
+        this.education = education;
+        this.speciality = speciality;
+        this.hobby = hobby;
+        this.remark = remark;
+        this.sex = sex;
+    }
+
+    public employee(int dept_id, int job_id, String name, String card_id,String phone,String sex) {
+        this.dept_id = dept_id;
+        this.job_id = job_id;
+        this.name = name;
+        this.card_id = card_id;
+        this.phone=phone;
+        this.sex=sex;
     }
 
     public employee(int dept_id, String name, String card_id, String address, String post_code, String tel, String phone, String qq, String email, String sex, String party, Timestamp birthday, String race, String education, String speciality, String hobby, String remark, int job_id) {
@@ -54,8 +91,7 @@ public class employee {
     String qq;
     //邮箱
     String email;
-    //性别
-    String sex;
+
     //政党
     String party;
     //生日
@@ -70,6 +106,8 @@ public class employee {
     String hobby;
     //备注
     String remark;
+    //性别
+    String sex;
 //    //创建日期
 //    Timestamp createdate;
 
@@ -90,28 +128,12 @@ public class employee {
         this.dept_id = dept_id;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public String getCard_id() {
         return card_id;
     }
 
     public void setCard_id(String card_id) {
         this.card_id = card_id;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
     }
 
     public String getPost_code() {
@@ -121,6 +143,26 @@ public class employee {
     public void setPost_code(String post_code) {
         this.post_code = post_code;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+
 
     public String getTel() {
         return tel;

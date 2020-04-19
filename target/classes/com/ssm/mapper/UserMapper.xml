@@ -4,19 +4,56 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.ssm.mapper.UserMapper">
   <insert id="addUser">
-  	insert into employee_inf(DEPT_ID,JOB_ID,name ,card_id,address,post_code,tel,phone,qq,email,party,birthday,
+  	insert into employee_inf(dept_id,job_id,name ,card_id,address,post_code,tel,phone,qq,email,party,birthday,
   	race,education,speciality,hobby,remark,sex) values(#{dept_id},#{job_id},#{name },#{card_id},
   	#{address},#{post_code},#{tel},#{phone},#{qq},#{email},#{party},#{birthday},#{race},#{education},#{speciality},
   	#{hobby},#{remark},#{sex});
   </insert>
 
-<!--  <delete id="deleteUser" parameterType="int">-->
-<!--  	delete from  user where  id=#{id};-->
-<!--  </delete>-->
+	<update id="updateUser" >
+  	update employee_inf set dept_id=#{dept_id},job_id=#{job_id},name=#{name},card_id=#{card_id},address=#{address},post_code=#{post_code},
+  	 tel=#{tel},phone=#{phone},qq=#{qq},email=#{email},birthday=#{birthday},party=#{party},
+  	    race=#{race},education=#{education},speciality=#{speciality},hobby=#{hobby},
+  	       remark=#{remark},sex=#{sex}  where id=#{id};
+  </update>
 
-<!--  <update id="updateUser">-->
-<!--  	update user set password='888888' where id=7;-->
-<!--  </update>-->
+  <delete id="deleteUser" parameterType="int">
+  	delete from  employee_inf where  id=#{id};
+  </delete>
+	<select id="searchEmployee" resultMap="all">
+  	 select  * from employee_inf where name=#{name }and sex=#{sex} and card_id=#{card_id}and
+  	 phone=#{phone} and dept_id=#{dept_id} and job_id=#{job_id}
+  	 ;
+
+  </select>
+
+	<select id="findAll" resultMap="all">
+  	 select  * from employee_inf;
+
+  </select>
+	<resultMap type="com.ssm.pojo.employee" id="all">
+		<id column="id" property="id"/>
+		<result column="dept_id" property="dept_id"/>
+		<result column="job_id" property="job_id"/>
+		<result column="name" property="name"/>
+		<result column="card_id" property="card_id"/>
+		<result column="address" property="address"/>
+		<result column="post_code" property="post_code"/>
+		<result column="tel" property="tel"/>
+		<result column="phone" property="phone"/>
+		<result column="qq" property="qq"/>
+		<result column="email" property="email"/>
+		<result column="party" jdbcType="VARCHAR" property="party"/>
+		<result column="birthday" property="birthday"/>
+		<result column="race" property="race"/>
+		<result column="education" property="education"/>
+		<result column="speciality" property="speciality"/>
+		<result column="hobby" property="hobby"/>
+		<result column="remark" property="remark"/>
+		<result column="sex" property="sex"/>
+	</resultMap>
+
+
   
 <!--  <select id="findOne" resultType="com.ssm.pojo.User">-->
 <!--  	select * from  user where  id=1;-->
